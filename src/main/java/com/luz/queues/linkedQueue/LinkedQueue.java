@@ -1,0 +1,17 @@
+package com.luz.queues.linkedQueue;
+
+import com.luz.lists.singlyLinkedList.SinglyLinkedList;
+import com.luz.queues.Queue;
+
+/**
+ * Created by ionut on 8/11/2017.
+ */
+public class LinkedQueue<E> implements Queue<E> {
+    private SinglyLinkedList<E> list = new SinglyLinkedList<E>();
+    public LinkedQueue(){ }
+    public int size() { return list.size();}
+    public boolean isEmpty() { return list.isEmpty(); }
+    public void enqueue(E element) { list.addLast(element);}
+    public E first(){ return list.first(); }
+    public E dequeue() { return list.removeFirst();}
+}
